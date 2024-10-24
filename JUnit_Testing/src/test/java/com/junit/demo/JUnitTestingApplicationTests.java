@@ -86,8 +86,8 @@ class JUnitTestingApplicationTests {
 
 		restTemplate.delete(baseURI + "/delete/{id}", 352);
 		Product products = restTemplate.getForObject(baseURI + "/get/{id}", Product.class, 352);
-	//	assertEquals("Marker", products.getName());
-		assertEquals(4, repository.findAll().size());
+	//	assertEquals("Marker", products.getName());       //if we add this line, test case should file 
+		assertEquals(4, repository.findAll().size());            
 
 	}
 }
